@@ -1,0 +1,94 @@
+\documentclass[10pt,a4paper,twocolumn]{extarticle}
+
+%\usepackage{xeCJK}
+\usepackage[twoside=false,top=10mm,bottom=15mm,left=10mm,right=10mm]{geometry}
+\usepackage[subfigure]{tocloft}
+\usepackage[svgnames]{xcolor}
+\usepackage[english]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{graphicx,indentfirst}
+\usepackage{listings,caption}
+\usepackage{fontspec,subfigure,float}
+\setmainfont{Times New Roman}
+
+\lstset{
+	tabsize=4,
+    basicstyle=\ttfamily\scriptsize,
+    aboveskip={0.5\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=none,
+    rulecolor=\color{Gray},
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=true,
+    keywordstyle=\color{Blue},
+    commentstyle=\color{DarkGreen},
+    stringstyle=\color{Brown},
+}
+
+
+\begin{document}
+
+\title{AC}
+
+\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+\tableofcontents
+
+\section{General}
+	\subsection{Knapsack (Backpack)}
+
+\section{Data Structures}
+	\subsection{Treap}
+    	\lstinputlisting[language=C++]{treap.hpp}
+    \subsection{Fenwick Tree}
+    	\lstinputlisting[language=C++]{fenwick_tree.hpp}
+    \subsection{Segment Tree}
+    	\lstinputlisting[language=C++]{segment_tree.hpp}
+	\subsection{Disjoint Set}
+		\lstinputlisting[language=C++]{disjoint_set.hpp}
+
+\section{String Matching}
+	\subsection{KMP}
+		\lstinputlisting[language=C++]{kmp.hpp}
+    \subsection{Rolling Hash}
+		\lstinputlisting[language=C++]{rolling_hash.hpp}
+    \subsection{AC}
+    \subsection{Trie}
+
+\section{Graph}
+    \subsection{Shortest Path}
+        \subsubsection{Bellman-Ford}
+        \subsubsection{Dijkstra}
+			\lstinputlisting[language=C++]{dijkstra.hpp}
+        \subsubsection{Floyd-Warshall}
+    \subsection{Min. Span. Tree}
+        \subsubsection{Prim}
+        \subsubsection{Kruskal}
+	\subsection{Min. Vertex Cover}
+    \subsection{Lowest Common Ancestor}
+
+\section{Numeric}
+	\subsection{Pow.}
+		\lstinputlisting[language=C++]{pow.hpp}
+	\subsection{Miller-Rabin Prime Test}
+		\lstinputlisting[language=C++]{miller_rabin.hpp}
+
+	\subsection{Combination}
+		\lstinputlisting[language=C++]{combination.hpp}
+	\subsection{Discrete}
+		\lstinputlisting[language=C++]{discrete.hpp}
+
+\section{Et Cetera}
+	\subsection{Josephus}
+	\lstinputlisting[language=C++]{josephus.hpp}
+
+\section{C++ Reference}
+	\lstinputlisting[language=C++]{cppref.hpp}
+
+\end{document}

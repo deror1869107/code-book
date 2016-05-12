@@ -1,21 +1,17 @@
 int d[MAX + 1];
-void init()
-{
-    for(int i = 1; i <= MAX; ++i){
+
+void init() {
+    for(int i = 1; i <= MAX; ++i) {
         d[i] = i;
     }
 }
 
-int find(int n)
-{
+int find(int n) {
     return (d[n] == n) ? d[n] : d[n] = find(d[n]);
 }
 
-void union(int a, int b)
-{
+void union(int a, int b) {
     int x = find(a);
     int y = find(b);
-    if(x != y){
-        d[x] = y;
-    }
+    if(x != y) d[x] = y;
 }

@@ -1,30 +1,21 @@
-int a[MAX] = {0}, t[MAX] = {0};
-int N;
+int a[MAX] = {0}, t[MAX] = {0}, N;
 
-inline int lower_bit(int n)
-{
-    return n & (-n);
-}
-
-int sum(int n)
-{
+int sum(int n) {
     int s = 0;
-    while(n > 0){
+    while(n > 0) {
         s += t[n];
-        n -= lower_bit(n);
+        n -= n & -n;
     }
     return s;
 }
 
-void add(int n, int d)
-{
+void add(int n, int d) {
     while(n <= N){
         t[n] += d;
-        n += lower_bit(n);
+        n += n & -n;
     }
 }
 
-int query(int a, int b)
-{
+int query(int a, int b) {
     return sum(b) - sum(a - 1);
 }
